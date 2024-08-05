@@ -1,10 +1,15 @@
 import './Card.css'
 
-function Card() {
+interface CardProps {
+    titulo : string;
+    descricao : string;
+}
+
+function Card({ titulo, descricao } : CardProps) {
     return (
         <div className="card">
-            <h1>Título do Card</h1>
-            <p>Descrição do Card</p>
+            <h1>{ titulo }</h1>
+            <p>{ descricao }</p>
         </div>
     )
 }
